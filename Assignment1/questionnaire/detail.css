@@ -1,0 +1,109 @@
+span {
+    font-size: 35px;
+}
+
+span.thank-you {
+    font-size: 50px;
+    position: relative;
+    top: 150px;
+}
+
+.greetings {
+    line-height: 65px;
+}
+
+.g1{
+    font-family: monospace;
+    font-size: 20px;
+    position: relative;
+    top:300px;
+    left: -200px;
+}
+
+.g2{
+    font-family: monospace;
+    font-size: 20px;
+    position: relative;
+    top:240px;
+    left: 460px;
+}
+
+.radio-btn {
+    font-family: monospace;
+    font-size: 20px;
+    line-height: 50px;
+    float: left;
+    margin-left: 210px;
+}
+
+.cascade {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#btn3 {
+    position: relative;
+    left: 15px;
+    top: 495px;
+    font-size: 20px;
+    padding: 8px;
+    width: 100px;
+}
+
+#btn4 {
+    position: relative;
+    left: 780px;
+    top: 495px;
+    font-size: 20px;
+    padding: 8px;
+    width: 100px;
+}
+
+#q1 {
+    visibility: visible;
+}
+
+#q2 {
+    visibility: hidden;
+}
+
+#q3 {
+    visibility: hidden;
+}
+
+#q4 {
+    visibility: hidden;
+}
+
+#q5 {
+    visibility: hidden;
+}
+
+#q6 {
+    visibility: hidden;
+}
+
+#q7 {
+    visibility: hidden;
+}
+
+#q8 {
+    visibility: hidden;
+}
+
+#q9 {
+    visibility: hidden;
+}
+
+#q10 {
+    visibility: hidden;
+}
+
+#ending {
+    visibility: hidden;
+    width: 50%;
+}

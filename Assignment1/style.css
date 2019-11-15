@@ -1,0 +1,47 @@
+body {
+    background-image: url('./pic/background-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: 华文行楷;
+    font-size: 70px;
+}
+
+.background {
+    width: 1000px;
+    height: 550px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.45);
+    border-radius: 25px;
+    line-height: 40px;
+}
+
+.greetings {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+}
+
+#btn1 {
+    position: relative;
+    left: 20px;
+    top: -15px;
+    font-size: 20px;
+    padding: 8px;
+}
+
+#btn2 {
+    position: relative;
+    left: 690px;
+    top: -15px;
+    font-size: 20px;
+    padding: 8px;
+}

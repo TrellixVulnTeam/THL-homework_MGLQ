@@ -1,0 +1,38 @@
+ul {
+    list-style-type: none;
+    line-height: 55px;
+    font-family: monospace;
+    font-size: 20px;
+
+    height: 0;
+
+    position: relative;
+    top: -15px;
+    left: -25px;
+}
+
+.total-score {
+    width: 450px;
+    height: 500px;
+    position: relative;
+    left: 450px;
+    top: -30px;
+    border-left-style: solid;
+    border-left-color: rgb(0, 0, 0, 0.45);
+}
+
+.total {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 45px;
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+
+#result-sum {
+    width: 45%;
+    height: 45%;
+    position: relative;
+    left: 500px;
+    top: -410px;
+}

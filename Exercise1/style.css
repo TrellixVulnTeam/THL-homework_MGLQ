@@ -1,0 +1,27 @@
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+th {
+    background-color: steelblue;
+    text-align: left;
+    height: 10px;
+}
+
+td {
+    background-color: yellow;
+    text-align: center;
+    height: 10px;
+}
+
+.center {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.size {
+    width: 98%;
+    height: 85%;
+}

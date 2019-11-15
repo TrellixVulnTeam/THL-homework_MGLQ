@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>index</title>
+    <script type="text/javascript" src="./main.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <h1>《情商》</h1>
+    <div class="background">
+        <p class="greetings" style="font-size: 45px;">Hello!</p>
+        <p class="greetings" style="line-height: 70px;">We are students of THL.<br>We are doing research about current
+            students'
+            EQ level.<br>Here is a questionnaire we've made.<br><b>Can you help us?</b><br>
+            <span style="font-family: monospace;font-size: 15px;" onmousemove="showResource(event)"
+                onmouseout="hideResource()"><u>Picture resource.</u></span>
+        </p>
+        <button id="btn1" onclick="closeWindow()">Maybe not.</button>
+        <button id="btn2" onclick="openWindow()">Let's get started.</button>
+    </div>
+    <div id="layer"
+        style="display:none;position:absolute;z-index: 100;background-color: rgba(155, 155, 155, 0.5);height:25px;width:625px;">
+    </div>
+</body>
+
+</html>

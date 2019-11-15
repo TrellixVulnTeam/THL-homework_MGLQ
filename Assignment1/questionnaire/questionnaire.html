@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>questionnaire</title>
+    <script type="text/javascript" src="./questionnaire.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="./detail.css">
+</head>
+
+<body>
+    <h1>《情商》</h1>
+    <div class="background">
+        <div class="cascade" id="q1">
+            <p class="greetings"><span>Question1:</span><br>You are on a plane when a slight vibration
+                occurs.<br>Meanwhile, you are watching movie or something.<br>What would you do?</p>
+            <div class="radio-btn">
+                <label><input type="radio" name="choice1" value="1" onclick="getValue(this)">Nothing, keep doing my
+                    stuff regardless of the riot.</label><br>
+                <label><input type="radio" name="choice1" value="0" onclick="getValue(this)">I can't even notice
+                    that.</label><br>
+                <label><input type="radio" name="choice1" value="2" onclick="getValue(this)">Pay attention to the
+                    situation, waiting for further broadcast.</label>
+            </div>
+        </div>
+        <div class="cascade" id="q2">
+            <p class="greetings"><span>Question2:</span><br>Bringing a goup of kids to the arcade,<br>One of them crys
+                because others don't play with him.<br>What would you do exactly.</p>
+            <div class="radio-btn">
+                <label><input type="radio" name="choice2" value="0" onclick="getValue(this)">Stay away. Let children
+                    handle it themselves.</label><br>
+                <label><input type="radio" name="choice2" value="2" onclick="getValue(this)">Talk to the children, help
+                    him integrate into the group.</label><br>
+                <label><input type="radio" name="choice2" value="1" onclick="getValue(this)">Find something else to
+                    distract his attention.</label>
+            </div>
+        </div>
+        <div class="cascade" id="q3">
+            <p class="greetings"><span>Question3:</span><br>Suppose you are a college student who seek good grade on the
+                course,<br>but end up merely passing the midterm exam.<br>What should you do at this time?</p>
+            <div class="radio-btn">
+                <label><input type="radio" name="choice3" value="1" onclick="getValue(this)">Swear to yourself that you
+                    will study harder later in this semester.</label><br>
+                <label><input type="radio" name="choice3" value="0" onclick="getValue(this)">Try to persuade the
+                    professor to give you a higher grade.</label><br>
+                <label><input type="radio" name="choice3" value="2" onclick="getValue(this)">Make a detailed study plan
+                    and stick to it.</label>
+            </div>
+        </div>
+        <div class="cascade" id="q4">
+            <p class="greetings"><span>Question4:</span><br>Suppose you are an insurance salesman visiting some
+                potential customers.<br>However, you got straight rejected by 15 people in a row.<br>What would you
+                think?</p>
+            <div class="radio-btn">
+                <label><input type="radio" name="choice4" value="2" onclick="getValue(this)">Just a bad day, bad luck.
+                    Tomorrow will be fine.</label><br>
+                <label><input type="radio" name="choice4" value="0" onclick="getValue(this)">Reflex whether you are
+                    suitable for a salesman.</label><br>
+                <label><input type="radio" name="choice4" value="1" onclick="getValue(this)">Consider going to other
+                    customers.</label>
+            </div>
+        </div>
+        <div class="cascade" id="q5">
+            <p class="greetings"><span>Question5:</span><br>Now you are a manager against racist speech in the
+                company.<br>One day, you accidentally heard someone joking about racism.<br>What
+                would
+                you do?</p>
+            <div class="radio-btn">
+                <label><input type="radio" name="choice5" value="2" onclick="getValue(this)">Tell him face to face that
+                    this joke is not appropriate.</label><br>
+                <label><input type="radio" name="choice5" value="1" onclick="getValue(this)">Call the man to your office
+                    and lash out at his behavior.</label><br>
+                <label><input type="radio" name="choice5" value="0" onclick="getValue(this)">Ignore it, it's just a
+                    joke.</label>
+            </div>
+        </div>
+        <div class="cascade" id="q6">
+            <p class="greetings"><span>Question6:</span><br>Your friend is driving when suddenly another car cut in.<br>
+                He
+                get furious and you try to calm him down.<br>What would you
+                do now?</p>
+            <div class="radio-btn">
+                <label><input type="radio" name="choice6" value="2" onclick="getValue(this)">Put on a tape he likes to
+                    listen, shift his attention.</label><br>
+                <label><input type="radio" name="choice6" value="1" onclick="getValue(this)">Tell him to forget about
+                    it. It's not a big deal.</label><br>
+                <label><input type="radio" name="choice6" value="0" onclick="getValue(this)">Scold the rude driver,
+                    stand on your friend's side.</label>
+            </div>
+        </div>
+        <div class="cascade" id="q7">
+            <p class="greetings"><span>Question7:</span><br>You are having fierce argument with your friend.<br>In
+                anger, both of you personal attack on each other.<br>Though you don't mean it, what would you do right
+                now?</p>
+            <div class="radio-btn">
+                <label><input type="radio" name="choice7" value="0" onclick="getValue(this)">Apologize to your friend,
+                    then ask him to do the same.</label><br>
+                <label><input type="radio" name="choice7" value="1" onclick="getValue(this)">Keep silence no matter what
+                    he say.</label><br>
+                <label><input type="radio" name="choice7" value="2" onclick="getValue(this)">Stop for awhile, then sort
+                    out your thought and make your position clear.</label>
+            </div>
+        </div>
+        <div class="cascade" id="q8">
+            <p class="greetings"><span>Question8:</span><br>You are newly assigned to a unit as a leader.<br>If you are
+                to tackle the legacy,<br>What is the first thing to do?</p>
+            <div class="radio-btn">
+                <label><input type="radio" name="choice8" value="0" onclick="getValue(this)">Draft an agenda, and put up
+                    a meeting immediately.</label><br>
+                <label><input type="radio" name="choice8" value="1" onclick="getValue(this)">Let everyone say how to
+                    solve the problem.</label><br>
+                <label><input type="radio" name="choice8" value="2" onclick="getValue(this)">Give a certain amount of
+                    time to get to know each other.</label>
+            </div>
+        </div>
+        <div class="cascade" id="q9">
+            <p class="greetings"><span>Question9:</span><br>Your 3-year-old son is very timid.<br>In fact, he was always
+                nervous about strange places and strangers from birth.<br>What should you do?</p>
+            <div class="radio-btn">
+                <label><input type="radio" name="choice9" value="0" onclick="getValue(this)">Keep him away from places he feels uneasy.</label><br>
+                <label><input type="radio" name="choice9" value="1" onclick="getValue(this)">Design a gradual series of
+                    challenges and help him overcome the fear.</label><br>
+                <label><input type="radio" name="choice9" value="2" onclick="getValue(this)">Take him to see
+                    doctor.</label>
+            </div>
+        </div>
+        <div class="cascade" id="q10">
+            <p class="greetings"><span>Question10:</span><br>You wanted to re-learn a musical instrument
+                you've learnt in childhood.<br>Now you started again.<br>What should you do to make best use of time?</p>
+            <div class="radio-btn">
+                <label><input type="radio" name="choice10" value="1" onclick="getValue(this)">Practice only when you have emotions.</label><br>
+                <label><input type="radio" name="choice10" value="0" onclick="getValue(this)">Take a hard target and work even harder.</label><br>
+                <label><input type="radio" name="choice10" value="2" onclick="getValue(this)">Choose targets that can be mastered gradually.</label>
+            </div>
+        </div>
+        <div class="cascade" id="ending">
+            <p class="greetings"><span class="thank-you">Thank you</span><br></p>
+            <p class="g1"><b>Try again please press</b></p>
+            <p class="g2"><b>Check result please press</b></p>
+        </div>
+        <button id="btn3" onclick="goBack()">Back</button>
+        <button id="btn4" onclick="goNext()">Next</button>
+    </div>
+</body>
+
+</html>
