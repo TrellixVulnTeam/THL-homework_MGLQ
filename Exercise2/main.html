@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>create your card</title>
+  <style type="text/css">
+    .div1 {
+      margin-top: 20px;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .div2 {
+      margin-top: 20px;
+    }
+
+    .div3 {
+      text-align: right;
+    }
+
+    .div4 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class='div1'>
+    Create your own greeting card!<br>
+  </div>
+
+  <form action="text.php" method="post">
+
+
+    <div class='div2'>
+      <table style="width:600px">
+        <tr>
+          <td style="width:300px">
+            <div class='div3'>
+              Name
+            </div>
+          </td>
+          <td style="width:300px">
+            <input type="text" name="textfield1">
+          </td>
+        </tr>
+        <tr>
+          <td style="width:300px">
+            <div class='div3'>
+              Recipient
+            </div>
+          </td>
+          <td style="width:300px">
+            <input type="text" name="textfield2">
+          </td>
+        </tr>
+        <tr>
+          <td style="width:300px">
+            <div class='div3'>
+              What do you wish him/her?
+            </div>
+          </td>
+          <td style="width:300px">
+            <input type="text" name="textfield3">
+          </td>
+        </tr>
+        <tr>
+          <td style="width:300px">
+            <div class='div3'>
+              Design character
+            </div>
+          </td>
+          <td style="width:300px">
+            <input type="text" name="textfield4">
+          </td>
+        </tr>
+      </table>
+      <table style="width:600px">
+        <tr>
+          <td style="width:600px">
+            <div class='div4'>
+              <input type="reset" value="Clear" />
+              <input type="submit" value='Submit'>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+
+
+  </form>
+
+</body>
+
+</html>
