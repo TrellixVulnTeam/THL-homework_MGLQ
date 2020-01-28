@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+/**
+ *   The css file related to historyAfterFilter page.
+ *
+ *  @Author: Zijian Xiao
+ */
+body{
+background-image: url("../images/back2.jpg"); no-repeat;
+	height:100%;
+	width:100%;
+	overflow: hidden;
+	background-size:cover;
+ 	font-family: 'Open Sans', sans-serif;
+}
+
+.top{
+	 text-align: center;
+	font-size:37px;
+	color:#400040;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:700;
+	
+}
+
+.d1{
+	position:relative;
+	width:80%;
+	font-size:20px;
+	text-align: right;
+	color:#ffffff;
+}
+
+.main{
+	
+	position:relative;
+	width:90%;
+	text-align: right;
+	font-size:22px;
+}
+.main a {
+    text-align: center;
+	font-size:22px;
+	color:#ff8040;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+}
+.main a:hover {
+	color:#ff0000;
+}
+
+
+table.altrowstable {
+	margin: auto;
+	font-family: verdana,arial,sans-serif;
+	font-size:16px;
+	color:#800080;
+	border-width: 1px;
+	border-color: #a9c6c9;
+	border-collapse: collapse;
+}
+table.altrowstable th {
+	border-width: 3px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #400040;
+}
+table.altrowstable td {
+	border-width: 3px;
+	padding: 12px;
+	border-style: solid;
+	border-color: #400040;
+}
+
+table.altrowstable th:nth-child(odd) {
+  background-color: #408080;
+}
+table.altrowstable th:nth-child(even) {
+  background-color: #ffffff;
+}
+table.altrowstable td:nth-child(odd) {
+  background-color: #ffffff;
+}
+table.altrowstable td:nth-child(even) {
+  background-color: #ffffff;
+}
+
+table.altrowstable  a {
+	text-align: center;
+	color: #ff8000;
+	font-family: 'Open Sans', sans-serif;
+}
+table.altrowstable a:hover {
+	color:#ff0000;
+}

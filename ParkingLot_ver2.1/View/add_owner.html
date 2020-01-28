@@ -1,0 +1,61 @@
+
+<!---This page is used to add owner information and for boundary test------>
+<!----@author Xiao zijian----->
+<!DOCTYPE html>
+<html lang="en" xmlns:visibility="http://www.w3.org/1999/xhtml">
+<head>
+<link href="../css/add_owner.css" rel='stylesheet' type='text/css' />
+<script language="javascript">
+/**
+ *   A new button is created to hide the submit button, since the action of form is always triggered at first!
+ *
+ *  @Author: Zijian Xiao
+ */
+	function testI(a) {
+		var reg = /^[1-9]\d{0,8}$/;
+		return reg.test(a);
+
+	}
+	function test() {
+		var a = document.getElementsByName("ownerID")[0].value;
+		if (document.getElementsByName("ownerID")[0].value == ''
+				|| document.getElementsByName("owner_name")[0].value == ''
+				|| document.getElementsByName("Car_ID")[0].value == ''
+				|| document.getElementsByName("Owner_Tele")[0].value == ''
+				|| document.getElementsByName("Car_Brand")[0].value == ''
+				|| document.getElementsByName("Car_Color")[0].value == '') {
+
+			alert("cannot be empty");
+
+		} else if (testI(a) == false) {
+			console.log("a");
+			alert("ownerID must be a 0-8 bits digit");
+		} else {
+			document.add.bt2.click();
+		}
+	}
+</script>
+</head>
+<body>
+	<br>
+	<br>
+	<br>
+	<div class="form">
+		<form id="add" name="add" action="../Control/doInsert_Owner.php">
+			Owner ID: <input type="text" name="ownerID"><br> Owner
+			Name: <input type="text" name="owner_name"><br> Car ID:
+			<input type="text" name="Car_ID"><br> Car Brand: <input
+				type="text" name="Car_Brand"><br> Car Color: <input
+				type="text" name="Car_Color"><br> Owner Telephone: <input
+				type="text" name="Owner_Tele"><br> <input type="button"
+				name="bt1" value="add" onclick=" test()"> <input
+				type="submit" name="bt2" visibility: hidden value="update">
+		</form>
+		<div>
+			<br> <a href="Main.php">Back to MainPage</a>
+		</div>
+
+
+	</div>
+</body>
+</html>

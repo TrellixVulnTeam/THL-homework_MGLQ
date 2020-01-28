@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!---This page is used to add parking information and for boundary test------>
+<!----@author Xiao zijian----->
+<html lang="en" xmlns:visibility="http://www.w3.org/1999/xhtml">
+<!--
+        User can insert a new data into current parking lot by this page.
+        author Mengke Qiu
+    -->
+<head>
+<link href="../css/add.css" rel='stylesheet' type='text/css' />
+<script language="javascript">
+/**
+ *   A new button is created to hide the submit button, since the action of form is always triggered at first!
+ *
+ *  @Author: Zijian Xiao
+ */
+	function testI(a) {
+		var reg = /^[0-2]\d{2}$/;
+		return reg.test(a);
+	}
+	function test() {
+		var a = document.getElementsByName("position")[0].value;
+		if (document.getElementsByName("id")[0].value == ''
+				|| document.getElementsByName("position")[0].value == '') {
+			alert("cannot be empty");
+		} else if (testI(a) == false) {
+
+			alert("position must be set between 000 to 299 ");
+		}
+		else {
+			document.add.bt2.click();
+		}
+	}
+</script>
+</head>
+<body>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="form">
+		<form id="add" name="add" action="../Control/doInsert.php">
+			Car_id: <input type="text" name="id"><br> Car_Position:
+			<input type="text" name="position"><br>
+			<input type="button" name="bt1" value="update" onclick="test()">
+			<input type="submit" name="bt2" visibility: hidden value="Upload">
+		</form>
+		<br>
+		<div>
+			<br> <a href="Main.php">Back to MainPage</a>
+		</div>
+	</div>
+
+</body>
+
+</html>
