@@ -58,12 +58,10 @@
         });
         var arr_ghi = [];
         var arr_end = [];
-        var arr2 = [];
         $.getJSON(
             "https://api.solcast.com.au/world_radiation/forecasts?latitude=53.865467&longitude=10.686559&format=json",
             function (data) {
                 for (i in data.forecasts) {
-                    arr2.push(i);
                     arr_ghi.push(data.forecasts[i].ghi);
                     arr_end.push(data.forecasts[i].period_end);
                 }
@@ -77,7 +75,7 @@
                         data: arr_ghi
                     }]
                 })
-            })
+            });
     </script>
 
 </body>
