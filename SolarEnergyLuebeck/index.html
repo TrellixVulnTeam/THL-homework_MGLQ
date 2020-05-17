@@ -58,24 +58,30 @@
         });
         var arr_ghi = [];
         var arr_end = [];
-        $.getJSON(
-            "https://api.solcast.com.au/world_radiation/forecasts?latitude=53.865467&longitude=10.686559&format=json",
-            function (data) {
-                for (i in data.forecasts) {
-                    arr_ghi.push(data.forecasts[i].ghi);
-                    arr_end.push(data.forecasts[i].period_end);
+        $(function () {
+            $.ajax({
+                type: 'get',
+                url: 'https://api.solcast.com.au/world_radiation/forecasts?latitude=53.865467&longitude=10.686559&format=json',
+                dataType: 'JSON',
+                data: {},
+                success: function (data) {
+                    for (i in data.forecasts) {
+                        arr_ghi.push(data.forecasts[i].ghi);
+                        arr_end.push(data.forecasts[i].period_end);
+                    }
+                    myChart.setOption({
+                        xAxis: {
+                            data: arr_end
+                        },
+                        series: [{
+                            // 根据名字对应到相应的系列
+                            name: 'ghi',
+                            data: arr_ghi
+                        }]
+                    })
                 }
-                myChart.setOption({
-                    xAxis: {
-                        data: arr_end
-                    },
-                    series: [{
-                        // 根据名字对应到相应的系列
-                        name: 'ghi',
-                        data: arr_ghi
-                    }]
-                })
-            });
+            })
+        })
     </script>
 
 </body>
