@@ -3,13 +3,14 @@
 
 <head>
     <title>index</title>
+    <!-- Echarts -->
     <script src="echarts.min.js"></script>
-    <script
-        src="https://api.solcast.com.au/world_radiation/forecasts?latitude=53.865467&longitude=10.686559&format=json">
-    </script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <body>
+    <!-- Title area -->
     <table width=750 border=0 cellspacing=0 cellpadding=0 align=center bgcolor=#ffffff>
         <tr>
             <td width=750 height=2 colspan=3></td>
@@ -34,14 +35,16 @@
             <td width=750 height=2 colspan=3></td>
         </tr>
     </table></br>
+    <!-- Hint message -->
     <p align=center>
         <font size=3>Click start to see the solar energy status right now!</font>
     </p>
-    <div id="main" style="width: 50%;height:400px;"></div>
+    <!-- Container of charts -->
+    <div id="charts" style="width: 50%;height:400px;"></div>
     <script type="text/javascript">
-        // example
-        var myChart = echarts.init(document.getElementById('main'));
-        // 显示标题，图例和空的坐标轴
+        // Initialize charts
+        var myChart = echarts.init(document.getElementById('charts'));
+        // Display empty charts
         myChart.setOption({
             title: {
                 text: 'SolarEnergyLevel'
@@ -56,32 +59,39 @@
                 data: []
             }]
         });
+        // Declare variables to store asynchronous data
         var arr_ghi = [];
         var arr_end = [];
-        $(function () {
-            $.ajax({
-                type: 'get',
-                url: 'https://api.solcast.com.au/world_radiation/forecasts?latitude=53.865467&longitude=10.686559&format=json',
-                dataType: 'JSON',
-                data: {},
-                success: function (data) {
-                    for (i in data.forecasts) {
-                        arr_ghi.push(data.forecasts[i].ghi);
-                        arr_end.push(data.forecasts[i].period_end);
-                    }
-                    myChart.setOption({
-                        xAxis: {
-                            data: arr_end
-                        },
-                        series: [{
-                            // 根据名字对应到相应的系列
-                            name: 'ghi',
-                            data: arr_ghi
-                        }]
-                    })
-                }
-            })
-        })
+        // Proxy to avoid Cross-domain issue
+        $.ajaxPrefilter(function (options) {
+            if (options.crossDomain && jQuery.support.cors) {
+                var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
+                options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
+            }
+        });
+        // Attain asynchronous data
+        $.ajax({
+            url: 'https://api.solcast.com.au/world_radiation/forecasts?latitude=53.865467&longitude=10.686559&format=json&api_key=0ZP0PFQBzetZTCCl7W_M6I-VfGj-fGzy',
+            type: 'GET',
+            dataType: 'JSON',
+            success: function (data) {
+                for (i in data.forecasts) {
+                    arr_ghi.push(data.forecasts[i].ghi);
+                    arr_end.push(data.forecasts[i].period_end);
+                };
+                // console.log(arr_ghi);
+                // Inject data in to the charts
+                myChart.setOption({
+                    xAxis: {
+                        data: arr_end
+                    },
+                    series: [{
+                        name: 'ghi',
+                        data: arr_ghi
+                    }]
+                });
+            }
+        });
     </script>
 
 </body>
