@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\SolarEnergyLuebeck\\echarts.min.js"
+            "program": "${workspaceFolder}\\SolarEnergyLuebeck\\js\\echarts\\echarts.min.js"
         }
     ]
 }
