@@ -3,46 +3,34 @@
 
 <head>
     <title>index</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
     <!-- Title area -->
-    <table width=750 border=0 cellspacing=0 cellpadding=0 align=center bgcolor=#ffffff>
-        <tr>
-            <td width=750 height=2 colspan=3></td>
-        </tr>
-        <tr>
-            <td width=750 height=1 bgcolor=#000000 colspan=3></td>
-        </tr>
-        <tr>
-            <td style=padding-left:10px>
-                <h2>SolarEnergyLuebeck</h2>
-            </td>
-            <td width=100% align=right>
-                <table width=100% border=0 cellspacing=0 cellpadding=0>
-                    <tr align=center>
-                        <td align=right style=padding-right:10px><button type="button">Start</button></td>
-                    </tr>
-                </table>
-        <tr>
-            <td width=750 height=1 bgcolor=#000000 colspan=3></td>
-        </tr>
-        <tr>
-            <td width=750 height=2 colspan=3></td>
-        </tr>
-    </table></br>
-    <!-- Hint message -->
-    <p align=center>
-        <font size=3>Click start to see the solar energy status right now!</font>
-    </p>
-    <!-- Container of charts -->
-    <div id="charts" style="width: 1200px;height:600px;margin: 0 auto;"></div>
+    <section class="first-screen">
+        <div class="container" id="parent">
+            <div class="container" id="header">
+                <h1 class="title">SolarEnergyLuebeck</h1>
+                <h2 class="subtitle">Click to check current solar energy status</h2>
+                <center>
+                    <button class="button" type="button">Check</button>
+                </center>
+            </div>
+        </div>
+    </section>
+    <!-- Charts area -->
+    <section class="second-screen">
+        <div class="container" id="charts" style="width: 1200px;height:600px;margin: 0 auto;"></div>
+    </section>
+    <!-- Reference area-->
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- ECharts -->
     <script src="./js/echarts/echarts.min.js"></script>
     <!-- Charts -->
-    <script src="./js/main.js"></script>
+    <script src="./js/charts.js"></script>
 </body>
 
 </html>
