@@ -18,7 +18,7 @@ Charts.showLoading();
 // Display empty charts
 Charts.setOption({
     title: {
-        text: 'StatusCharts(48hrs)'
+        text: 'StatusForecasts(48hrs)'
     },
     grid: {
         top: '15%'

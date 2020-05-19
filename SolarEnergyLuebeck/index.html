@@ -2,35 +2,36 @@
 <html>
 
 <head>
-    <title>index</title>
+    <title>Solar Energy Luebeck</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
     <!-- Title area -->
     <section class="first-screen">
-        <div class="container" id="parent">
-            <div class="container" id="header">
-                <h1 class="title">SolarEnergyLuebeck</h1>
-                <h2 class="subtitle">Click to check current solar energy status</h2>
-                <center>
-                    <button class="button" type="button">Check</button>
-                </center>
-            </div>
+        <div class="container" id="content">
+            <h1 class="title">Solar Energy Luebeck</h1>
+            <h2 class="subtitle">Click to check current solar energy status</h2>
+            <center>
+                <button class="button" type="button" id="check">Check</button>
+            </center>
+            <center>
+                <button class="button" type="button" id="details" onclick="showDetails()">Details</button>
+            </center>
         </div>
     </section>
     <!-- Charts area -->
     <section class="second-screen">
         <div class="container" id="charts" style="width: 1200px;height:600px;margin: 0 auto;"></div>
     </section>
-    <!-- Reference area-->
-
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- ECharts -->
     <script src="./js/echarts/echarts.min.js"></script>
     <!-- Charts -->
     <script src="./js/charts.js"></script>
+    <!-- Controls-->
+    <script src="./js/controls.js"></script>
 </body>
 
 </html>
