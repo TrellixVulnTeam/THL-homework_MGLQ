@@ -4,19 +4,20 @@
 <head>
     <title>Solar Energy Luebeck</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
     <!-- Title area -->
     <section class="first-screen">
-        <div class="container" id="content">
+        <div class="container load-hidden" id="content">
             <h1 class="title">Solar Energy Luebeck</h1>
-            <h2 class="subtitle">Click to check current solar energy status</h2>
+            <h2 class="subtitle">Click a button to start</h2>
             <center>
-                <button class="button" type="button" id="check">Check</button>
+                <button class="button" type="button" id="check">Check status</button>
             </center>
             <center>
-                <button class="button" type="button" id="details" onclick="showDetails()">Details</button>
+                <button class="button" type="button" id="details" onclick="showDetails()">Check details</button>
             </center>
         </div>
     </section>
@@ -25,7 +26,7 @@
         <div class="container" id="charts"></div>
         <div class="container" id="button">
             <center>
-                <button class="button" type="button" id="back" onclick="backTop()">Back</button>
+                <button class="button" type="button" id="back" onclick="backTop()">Back to top</button>
             </center>
         </div>
     </section>

@@ -78,7 +78,7 @@ Charts.setOption({
     },
     legend: {
         data: ['GHI (W/m^2)', 'Energy (Wh)'],
-        top: "18%",
+        top: "15%",
         left: 100
     },
     grid: {
@@ -115,13 +115,17 @@ Charts.setOption({
         name: 'Energy (Wh)',
         type: 'bar',
         yAxisIndex: 0,
-        data: []
+        data: [],
+        animationDelay: function (idx) {
+            return idx * 20 + 100;
+        }
     }, {
         name: 'GHI (W/m^2)',
         type: 'line',
         yAxisIndex: 1,
         data: []
-    }]
+    }],
+    animationEasing: 'elasticOut'
 });
 window.onresize = Charts.resize;
 // Declare variables to store asynchronous data
@@ -155,11 +159,11 @@ $.ajax({
             },
             series: [{
                 name: 'Energy (Wh)',
-                data: arr_ene
+                data: arr_ene,
             }, {
                 name: 'GHI (W/m^2)',
-                data: arr_ghi
-            }]
+                data: arr_ghi,
+            }],
         });
     }
 });
