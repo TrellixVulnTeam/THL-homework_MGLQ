@@ -60,12 +60,12 @@ function transDate(date) {
 }
 // console.log("2017-01-30T05:00:00.0000000Z");
 // Initialize charts
-var Charts = echarts.init(document.getElementById('charts'));
-Charts.showLoading();
+var solar_chart = echarts.init(document.getElementById('solar_chart'));
+solar_chart.showLoading();
 // Display empty charts
-Charts.setOption({
+solar_chart.setOption({
     title: {
-        text: 'Status Forecasts 48hours',
+        text: 'Solar Power 48hours',
         subtext: 'Energy calculated in 30mins period',
         left: 'center',
         padding: 40,
@@ -78,14 +78,8 @@ Charts.setOption({
     },
     legend: {
         data: ['GHI (W/m^2)', 'Energy (Wh)'],
-        top: "15%",
+        bottom: "5%",
         left: 100
-    },
-    grid: {
-        top: "15%",
-        bottom: "30%",
-        left: 100,
-        right: "50%"
     },
     xAxis: {
         type: 'category',
@@ -116,6 +110,18 @@ Charts.setOption({
         type: 'bar',
         yAxisIndex: 0,
         data: [],
+        itemStyle: {
+            normal: {
+                color: function (params) {
+                    if (params.value > 0 && params.value < 55) {
+                        return "#b22222";
+                    } else if (params.value >= 55 && params.value < 95) {
+                        return "#b8860b";
+                    }
+                    return "#8fbc8f";
+                }
+            }
+        },
         animationDelay: function (idx) {
             return idx * 20 + 100;
         }
@@ -127,7 +133,7 @@ Charts.setOption({
     }],
     animationEasing: 'elasticOut'
 });
-window.onresize = Charts.resize;
+window.onresize = solar_chart.resize;
 // Declare variables to store asynchronous data
 var arr_ene = [];
 var arr_ghi = [];
@@ -152,17 +158,17 @@ $.ajax({
         };
         // console.log(arr_ghi);
         // Inject data in to the charts
-        Charts.hideLoading();
-        Charts.setOption({
+        solar_chart.hideLoading();
+        solar_chart.setOption({
             xAxis: {
                 data: arr_end
             },
             series: [{
                 name: 'Energy (Wh)',
-                data: arr_ene,
+                data: arr_ene
             }, {
                 name: 'GHI (W/m^2)',
-                data: arr_ghi,
+                data: arr_ghi
             }],
         });
     }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NewEnergyLuebeck</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <!-- Title area -->
+    <section class="first-screen">
+        <div class="container load-hidden frosted" id="content">
+            <h1 class="title">Welcome</h1>
+            <h2 class="subtitle">Before start, you should know:</h2>
+            <p class="description">This website visualize the conditions of the renewable energy.</br>Main functions include:</p>
+            <ul>
+                <li>Solar power estimate actuals and forecasts.</li>
+                <li>Wind power estimate actuals and forecasts.</li>
+                <li>Overall new energy status conclusions.</li>
+                <li>Unique signal light function determining the data.</li>
+            </ul>
+            <center>
+                <button class="button" type="button" onclick="showDetails()">Check details</button>
+            </center>
+        </div>
+    </section>
+    <!-- Charts area -->
+    <section class="second-screen">
+        <div class="container" id="solar_chart"></div>
+        <center>
+            <button class="button" type="button" onclick="backTop()">Back to top</button>
+        </center>
+    </section>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- ECharts -->
+    <script src="./js/echarts/echarts.min.js"></script>
+    <!-- Charts -->
+    <script src="./js/charts.js"></script>
+    <!-- Controls-->
+    <script src="./js/controls.js"></script>
+</body>
+
+</html>
