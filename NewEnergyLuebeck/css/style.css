@@ -1,3 +1,4 @@
+/* Fonts quote */
 @font-face {
     font-family: Audrey;
     src: url(../fonts/Audrey-Normal.otf) format('truetype');
@@ -8,101 +9,22 @@
     src: url(../fonts/Gotham-Light-Regular.otf) format('truetype');
 }
 
+/* Overall style declaration start*/
 html,
 body {
     width: 100%;
     height: 100%;
     overflow: hidden;
     margin: 0;
+    font-family: Gotham-Light;
 }
 
-html.sr .load-hidden {
+/* Reveal animation */
+html.sr.load-hidden {
     visibility: hidden;
 }
 
-.first-screen {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-image: url('../img/background.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: none;
-}
-
-.frosted {
-    z-index: 1;
-    background-position: center center;
-    background-size: cover;
-    overflow: hidden;
-}
-
-.frosted:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background-image: url('../img/background.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    -webkit-filter: blur(20px);
-    -moz-filter: blur(20px);
-    -ms-filter: blur(20px);
-    -o-filter: blur(20px);
-    filter: blur(40px);
-    margin: -30px;
-
-}
-
-#content {
-    width: 50%;
-    height: 80%;
-    margin: auto;
-    position: absolute;
-    top: 20%;
-    left: 0;
-    right: 0;
-    box-shadow: 0 0 0 1px hsla(240, 0%, 100%, .3) inset, 0 .5em 1em rgba(0, 0, 0, 0.6);
-}
-
-h1 {
-    margin-top: 60px;
-    text-align: center;
-    color: black !important;
-    font-family: Gotham-Light;
-    letter-spacing: 0.1em;
-    font-size: 50px !important;
-}
-
-h2 {
-    padding-top: 1px !important;
-    text-align: center;
-    color: rgb(0, 0, 0) !important;
-    font-family: Audrey;
-}
-
-p {
-    padding-top: 20px;
-    font-family: Gotham-Light;
-    font-size: 25px;
-    line-height: 40px;
-    text-align: center;
-}
-
-ul {
-    font-family: Gotham-Light;
-    font-size: 20px;
-    line-height: 40px;
-    position: absolute;
-    left: 25%;
-}
-
+/* Button style */
 button {
     width: 140px;
     line-height: 38px;
@@ -136,7 +58,117 @@ button:active {
     background: linear-gradient(top, #424242, #575757);
 }
 
+/* Other elements style */
+h1 {
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-size: 50px;
+}
 
+h2 {
+    text-align: center;
+    font-family: Audrey;
+}
+
+p {
+    text-align: center;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+ul {
+    font-size: 20px;
+    line-height: 40px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    padding-top: 40px;
+    color: black;
+}
+
+/* Div container style */
+.container {
+    box-shadow: 0 0 0 1px hsla(240, 0%, 100%, .3) inset,
+        0 .5em 1em rgba(0, 0, 0, 0.6);
+}
+
+/* Frosted glass style */
+.frosted {
+    z-index: 1;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.frosted:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url('../img/background.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -ms-filter: blur(20px);
+    -o-filter: blur(20px);
+    filter: blur(40px);
+    margin: -30px;
+}
+
+/* First screen style declaration start */
+.first-screen {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url('../img/background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: none;
+}
+
+.title{
+    margin-top: 60px;
+}
+
+.subtitle{
+    padding-top: 1px;
+}
+
+.description{
+    padding-top: 20px;
+}
+
+.functions{
+    width: 300px;
+    margin: 0 auto;
+}
+
+.signal{
+    width: 450px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#content {
+    width: 50%;
+    height: 80%;
+    margin: auto;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+}
+
+/* Second screen style declaration start */
 .second-screen {
     width: 100%;
     height: 100%;
@@ -151,8 +183,5 @@ button:active {
     position: absolute;
     top: 10px;
     left: 10px;
-    box-shadow: 0 0 0 1px hsla(240, 0%, 100%, .3) inset,
-        0 .5em 1em rgba(0, 0, 0, 0.6);
-    text-shadow: 0 1px 1px hsla(240, 0%, 100%, .5);
     background-color: rgba(255, 255, 255, 0.7);
 }
