@@ -19,11 +19,6 @@ body {
     font-family: Gotham-Light;
 }
 
-/* Reveal animation */
-html.sr.load-hidden {
-    visibility: hidden;
-}
-
 /* Button style */
 button {
     width: 140px;
@@ -60,18 +55,15 @@ button:active {
 
 /* Other elements style */
 h1 {
-    text-align: center;
     letter-spacing: 0.1em;
     font-size: 50px;
 }
 
 h2 {
-    text-align: center;
     font-family: Audrey;
 }
 
 p {
-    text-align: center;
     font-size: 25px;
     line-height: 40px;
 }
@@ -79,19 +71,27 @@ p {
 ul {
     font-size: 20px;
     line-height: 40px;
+    margin: 0 auto;
 }
 
 a {
     display: block;
+    width: 95px;
+    height: 20px;
+    margin: auto;
+    position: relative;
+    bottom: -20px;
+    left: 0;
+    right: 0;
     text-align: center;
-    padding-top: 40px;
     color: black;
 }
 
 /* Div container style */
 .container {
-    box-shadow: 0 0 0 1px hsla(240, 0%, 100%, .3) inset,
+    box-shadow: 0 0 2px 1px rgba(240, 240, 240, 0.8) inset,
         0 .5em 1em rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Frosted glass style */
@@ -135,35 +135,62 @@ a {
     background-color: none;
 }
 
-.title{
+.home_title {
+    text-align: center;
     margin-top: 60px;
 }
 
-.subtitle{
+.home_subtitle {
+    text-align: center;
     padding-top: 1px;
 }
 
-.description{
+.home_description {
+    text-align: center;
     padding-top: 20px;
 }
 
-.functions{
-    width: 300px;
-    margin: 0 auto;
+.intro_title{
+    letter-spacing: 0;
+    font-size: 40px;
+    margin-left: 20px;
 }
 
-.signal{
-    width: 450px;
-    margin: 0 auto;
-    padding-top: 20px;
+.intro_description{
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: -20px;
+    line-height: 50px;
 }
 
-#content {
+.signal {
+    width: 215px;
+}
+
+#home_content {
+    box-shadow: 0 0 2px 1px rgba(240, 240, 240, 0.8) inset,
+        0 .5em rgba(230, 230, 230, 0);
+    background-color: rgba(245, 245, 245, 0.5);
     width: 50%;
     height: 80%;
+    top: 20%;
+    visibility: hidden;
     margin: auto;
     position: absolute;
-    top: 20%;
+    left: 0;
+    right: 0;
+}
+
+#intro_content{
+    box-shadow: 0 0 2px 1px rgba(240, 240, 240, 0.8) inset,
+        0 .5em rgba(230, 230, 230, 0);
+    background-color: rgba(245, 245, 245, 0.5);
+    width: 80%;
+    height: 90%;
+    top: 10%;
+    visibility: hidden;
+    margin: auto;
+    position: absolute;
     left: 0;
     right: 0;
 }
@@ -174,14 +201,30 @@ a {
     height: 100%;
     position: relative;
     background-color: rgb(230, 230, 230);
-    margin-top: 20px;
+}
+
+#charts {
+    width: 90%;
+    height: 45%;
+    top: 20px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
 
 #solar_chart {
-    width: 55%;
+    width: 44.5%;
     height: 45%;
+    bottom: 6%;
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
+    left: 5%;
+}
+
+#wind_chart {
+    width: 44.5%;
+    height: 45%;
+    bottom: 6%;
+    position: absolute;
+    right: 5%;
 }
