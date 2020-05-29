@@ -200,8 +200,6 @@ solar_chart.setOption({
     yAxis: [{
         type: 'value',
         name: "Energy (KWh)",
-        max: 10000,
-        interval: 2000,
         splitLine: {
             show: false
         },
@@ -209,8 +207,6 @@ solar_chart.setOption({
     }, {
         type: 'value',
         name: "GHI (W/m^2)",
-        max: 900,
-        interval: 180,
         splitLine: {
             show: false
         },
@@ -272,8 +268,6 @@ wind_chart.setOption({
     yAxis: [{
         type: 'value',
         name: "Energy (KWh)",
-        max: 500,
-        interval: 100,
         splitLine: {
             show: false
         },
@@ -281,8 +275,6 @@ wind_chart.setOption({
     }, {
         type: 'value',
         name: "Wind speed (m/s)",
-        max: 8,
-        interval: 1.6,
         splitLine: {
             show: false
         },
