@@ -335,9 +335,10 @@ $.ajax(settings).done(function (response) {
     var arr_ene_win = [];
     var arr_ene_ttl = [];
     var arr_end = [];
-    var amt_red = 0,
+    var amt_red = 0, // Amount of certain lights
         amt_yel = 0,
         amt_gre = 0;
+    // Store data
     for (i in response.data) {
         arr_ghi.push(Math.round(response.data[i].solar_rad));
         arr_spd.push(response.data[i].wind_spd.toFixed(2));
@@ -346,6 +347,7 @@ $.ajax(settings).done(function (response) {
         arr_ene_ttl.push(calWind(response.data[i].wind_spd) + calSolar(response.data[i].solar_rad));
         arr_end.push(transDate(response.data[i].timestamp_utc));
     };
+    // Calculate lights' amounts for pie chart
     for (i = 0; i < arr_ene_ttl.length; i++) {
         if (arr_ene_ttl[i] >= 0 && arr_ene_ttl[i] < 0.9 * calSolar(375) + 0.1 * calWind(2.78)) {
             amt_red++;

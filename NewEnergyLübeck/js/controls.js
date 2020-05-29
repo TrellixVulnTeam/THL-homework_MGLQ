@@ -19,14 +19,15 @@ function showDetails() {
         block: 'start'
     })
 }
-//Declare back to top button function
+// Declare back to top button function
 function backTop() {
     back.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
     })
 }
-//Declare signal button function
+// Declare signal button function
+// Declare ajax settings
 var settings = {
     "async": true,
     "crossDomain": true,
@@ -37,14 +38,17 @@ var settings = {
         "x-rapidapi-key": "7d66317eadmshc37b41f504ff1c7p1f42d9jsneee75038948b"
     }
 }
-
+// Atain asychronous data
 function showSignal() {
-    alert('please wait');
+    alert('Please wait for a moment.');
     $.ajax(settings).done(function (response) {
         var cur_ene;
-        cur_ene = calSolar(response.data.solar_rad) + calWind(response.data.wind_spd);
+        cur_ene = calSolar(response.data[0].solar_rad) + calWind(response.data[0].wind_spd);
+        // Remove animation class
+        document.getElementById("home_content").classList.remove('animated');
+        // Show current signal light
         if (cur_ene >= 0 && cur_ene < 0.9 * calSolar(375) + 0.1 * calWind(2.78)) {
-            document.getElementById('home_content').style.backgroundColor = "#a52a2a";
+            document.getElementById('home_content').style.backgroundColor = "#dc143c";
         } else if (cur_ene >= 0.9 * calSolar(375) + 0.1 * calWind(2.78) && cur_ene < 0.9 * calSolar(625) + 0.1 * calWind(5.23)) {
             document.getElementById('home_content').style.backgroundColor = "#ffd700";
         } else {

@@ -12,42 +12,52 @@
 /* Overall style declaration start*/
 html,
 body {
+    /* Location */
+    margin: 0;
+
+    /* Style */
     width: 100%;
     height: 100%;
     overflow: hidden;
-    margin: 0;
     font-family: Gotham-Light;
 }
 
 /* Button style */
 button {
+    /* Location */
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+
+    /* Style */
     width: 140px;
     line-height: 38px;
-    text-align: center;
     font-weight: bold;
     color: #fff;
     text-shadow: 1px 1px 1px #333;
     border-radius: 5px;
-    overflow: hidden;
     border: 1px solid #333;
     box-shadow: 0 1px 2px #8b8b8b inset, 0 -1px 0 #3d3d3d inset, 0 -2px 3px #8b8b8b inset;
+    overflow: hidden;
+    /* Compatiblity */
     background: -webkit-linear-gradient(top, #656565, #4c4c4c);
     background: -moz-linear-gradient(top, #656565, #4a4a4a);
     background: linear-gradient(top, #656565, #4a4a4a);
-    margin: auto;
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    right: 0;
+
 }
 
 button:hover {
+    /* Compatiblity */
     background: -webkit-linear-gradient(top, #818181, #575757);
     background: -moz-linear-gradient(top, #818181, #575757);
     background: linear-gradient(top, #818181, #575757);
 }
 
 button:active {
+    /* Compatiblity */
     background: -webkit-linear-gradient(top, #424242, #575757);
     background: -moz-linear-gradient(top, #424242, #575757);
     background: linear-gradient(top, #424242, #575757);
@@ -55,8 +65,8 @@ button:active {
 
 /* Other elements style */
 h1 {
-    letter-spacing: 0.1em;
     font-size: 50px;
+    letter-spacing: 0.1em;
 }
 
 h2 {
@@ -69,21 +79,28 @@ p {
 }
 
 ul {
+    /* Location */
+    margin: 0 auto;
+
+    /* Style */
+    width: 215px;
     font-size: 20px;
     line-height: 40px;
-    margin: 0 auto;
 }
 
 a {
+    /* Location */
     display: block;
-    width: 95px;
-    height: 20px;
-    margin: auto;
+    text-align: center;
     position: relative;
+    margin: auto;
     bottom: -20px;
     left: 0;
     right: 0;
-    text-align: center;
+
+    /* Style */
+    width: 95px;
+    height: 20px;
     color: black;
 }
 
@@ -103,30 +120,38 @@ a {
 }
 
 .frosted:after {
-    content: '';
+    /* Location */
     position: absolute;
+    margin: -30px;
     top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+
+    /* Style */
     z-index: -1;
+    content: '';
     background-image: url('../img/background.jpg');
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    -webkit-filter: blur(20px);
-    -moz-filter: blur(20px);
-    -ms-filter: blur(20px);
-    -o-filter: blur(20px);
+    /* Compatiblity*/
+    -webkit-filter: blur(40px);
+    -moz-filter: blur(40px);
+    -ms-filter: blur(40px);
+    -o-filter: blur(40px);
     filter: blur(40px);
-    margin: -30px;
+
 }
 
 /* First screen style declaration start */
 .first-screen {
+    /* Location */
+    position: relative;
+
+    /* Style */
     width: 100%;
     height: 100%;
-    position: relative;
     background-image: url('../img/background.jpg');
     background-position: center center;
     background-repeat: no-repeat;
@@ -136,95 +161,258 @@ a {
 }
 
 .home_title {
-    text-align: center;
+    /* Location */
     margin-top: 60px;
+    text-align: center;
 }
 
 .home_subtitle {
-    text-align: center;
+    /* Location */
     padding-top: 1px;
+    text-align: center;
 }
 
 .home_description {
-    text-align: center;
+    /* Location */
     padding-top: 20px;
+    text-align: center;
 }
 
-.intro_title{
-    letter-spacing: 0;
-    font-size: 40px;
+.intro_title {
+    /* Location*/
     margin-left: 20px;
-}
 
-.intro_description{
+    /* Style */
     font-size: 30px;
-    margin-left: 20px;
+    letter-spacing: 0;
+}
+
+.intro_description {
+    /* Location */
     margin-top: -20px;
+    margin-left: 20px;
+
+    /* Style*/
+    font-size: 25px;
     line-height: 50px;
 }
 
-.signal {
-    width: 215px;
-}
-
 #home_content {
-    box-shadow: 0 0 2px 1px rgba(240, 240, 240, 0.8) inset,
-        0 .5em rgba(230, 230, 230, 0);
-    background-color: rgba(245, 245, 245, 0.5);
+    /* Location */
+    position: absolute;
+    margin: auto;
+    top: 20%;
+    left: 0;
+    right: 0;
+
+    /* Style */
     width: 50%;
     height: 80%;
-    top: 20%;
+    box-shadow: 0 0 2px 1px rgba(240, 240, 240, 0.8) inset,
+        0 .5em rgba(230, 230, 230, 0);
+    /* For usability of ScrollReveal */
     visibility: hidden;
-    margin: auto;
-    position: absolute;
-    left: 0;
-    right: 0;
 }
 
-#intro_content{
+#intro_content {
+    /* Location */
+    position: absolute;
+    margin: auto;
+    top: 10%;
+    left: 0;
+    right: 0;
+
+    /* Style */
+    width: 80%;
+    height: 90%;
     box-shadow: 0 0 2px 1px rgba(240, 240, 240, 0.8) inset,
         0 .5em rgba(230, 230, 230, 0);
     background-color: rgba(245, 245, 245, 0.5);
-    width: 80%;
-    height: 90%;
-    top: 10%;
+    /* For usability of ScrollReveal */
     visibility: hidden;
-    margin: auto;
+}
+
+/* Gradient background color animation */
+.animated {
+    animation: gradient_color 6.5s linear 0s infinite;
+}
+
+@keyframes gradient_color {
+    from {
+        background-color: #2e8b57;
+    }
+
+    30% {
+        background-color: #dc143c;
+    }
+
+    60% {
+        background-color: #ffd700;
+    }
+
+    to {
+        background-color: #2e8b57;
+    }
+}
+
+/* Traffic light area start */
+.traffic_light {
+    /* Frame location */
+    text-align: center;
     position: absolute;
-    left: 0;
-    right: 0;
+    margin-top: -65px;
+    margin-left: 400px;
+
+    /* Frame style */
+    width: 180px;
+    height: 50px;
+    background: #282f2fb0;
+    border-radius: 50px;
+
+}
+
+.traffic_light::after {
+    /* Light location */
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Light style */
+    width: 40px;
+    height: 40px;
+    content: '';
+    border-radius: 50%;
+
+    animation: traffic_light 5s linear 0s infinite;
+}
+
+/* Traffic light animation start */
+@keyframes traffic_light {
+    from {
+        background: transparent;
+        /* Background stands for yellow light */
+        box-shadow:
+            -55px 0 0 0 transparent,
+            /* Red light */
+            55px 0 0 0 transparent,
+            /* Green light */
+            -55px 0 15px 0 transparent,
+            /* Red light blur */
+            0px 0 15px 0 transparent,
+            /* Yellow light blur */
+            55px 0 15px 0 transparent;
+            /* Green light blur */
+    }
+
+    25% {
+        background: transparent;
+        /* Red light shines */
+        box-shadow:
+            -55px 0 0 0 rgb(247, 78, 26),
+            /* Red light */
+            55px 0 0 0 transparent,
+            /* Green light */
+            -55px 0 15px 0 rgb(247, 78, 26),
+            /* Red light blur */
+            0px 0 15px 0 transparent,
+            /* Yellow light blur */
+            55px 0 15px 0 transparent;
+            /* Green light blur */
+    }
+
+    50% {
+        background: rgb(231, 183, 78);
+        /* Yellow light shines */
+        box-shadow:
+            -55px 0 0 0 transparent,
+            /* Red light */
+            55px 0 0 0 transparent,
+            /* Green light */
+            -55px 0 15px 0 transparent,
+            /* Red light blur */
+            0px 0 15px 0 rgb(231, 183, 78),
+            /* Yellow light blur */
+            55px 0 15px 0 transparent;
+            /* Green light blur */
+    }
+
+    75% {
+        background: transparent;
+        /* Green light shines */
+        box-shadow:
+            -55px 0 0 0 transparent,
+            /* Red light */
+            55px 0 0 0 rgb(38, 175, 84),
+            /* Green light */
+            -55px 0 15px 0 transparent,
+            /* Red light blur */
+            0px 0 15px 0 transparent,
+            /* Yellow light blur */
+            55px 0 15px 0 rgb(38, 175, 84);
+            /* Green light blur */
+    }
+
+    to {
+        background: transparent;
+        /* Animation over */
+        box-shadow:
+            -55px 0 0 0 transparent,
+            /* Red light */
+            55px 0 0 0 transparent,
+            /* Green light */
+            -55px 0 15px 0 transparent,
+            /* Red light blur */
+            0px 0 15px 0 transparent,
+            /* Yellow light blur */
+            55px 0 15px 0 transparent;
+            /* Green light blur */
+    }
 }
 
 /* Second screen style declaration start */
 .second-screen {
+    /* Location */
+    position: relative;
+
+    /* Style */
     width: 100%;
     height: 100%;
-    position: relative;
     background-color: rgb(230, 230, 230);
 }
 
 #charts {
-    width: 90%;
-    height: 45%;
-    top: 20px;
-    margin: auto;
+    /* Location */
     position: absolute;
+    margin: auto;
+    top: 20px;
     left: 0;
     right: 0;
+
+    /* Style */
+    width: 90%;
+    height: 45%;
 }
 
 #solar_chart {
+    /* Location */
+    position: absolute;
+    bottom: 6%;
+    left: 5%;
+
+    /* Style */
     width: 44.5%;
     height: 45%;
-    bottom: 6%;
-    position: absolute;
-    left: 5%;
 }
 
 #wind_chart {
+    /* Location */
+    position: absolute;
+    bottom: 6%;
+    right: 5%;
+
+    /* Style */
     width: 44.5%;
     height: 45%;
-    bottom: 6%;
-    position: absolute;
-    right: 5%;
 }
