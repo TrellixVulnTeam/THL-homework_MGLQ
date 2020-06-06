@@ -249,7 +249,7 @@ wind_chart.setOption({
     tooltip: {
         trigger: 'axis',
         axisPointer: {
-            animation: false
+            animation:true
         }
     },
     legend: {

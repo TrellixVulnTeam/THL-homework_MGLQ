@@ -57,10 +57,11 @@ button:hover {
 }
 
 button:active {
-    /* Compatiblity */
-    background: -webkit-linear-gradient(top, #424242, #575757);
-    background: -moz-linear-gradient(top, #424242, #575757);
-    background: linear-gradient(top, #424242, #575757);
+    transform: translateY(2px);
+}
+
+button:focus {
+    outline: 0;
 }
 
 /* Other elements style */
@@ -218,13 +219,13 @@ a {
     /* Location */
     position: absolute;
     margin: auto;
-    top: 10%;
+    top: 15%;
     left: 0;
     right: 0;
 
     /* Style */
-    width: 80%;
-    height: 90%;
+    width: 70%;
+    height: 85%;
     box-shadow: 0 0 2px 1px rgba(240, 240, 240, 0.8) inset,
         0 .5em rgba(230, 230, 230, 0);
     background-color: rgba(245, 245, 245, 0.5);
@@ -249,7 +250,7 @@ a {
     60% {
         background-color: #ffd700;
     }
-
+    
     to {
         background-color: #2e8b57;
     }
@@ -303,7 +304,7 @@ a {
             0px 0 15px 0 transparent,
             /* Yellow light blur */
             55px 0 15px 0 transparent;
-            /* Green light blur */
+        /* Green light blur */
     }
 
     25% {
@@ -319,7 +320,7 @@ a {
             0px 0 15px 0 transparent,
             /* Yellow light blur */
             55px 0 15px 0 transparent;
-            /* Green light blur */
+        /* Green light blur */
     }
 
     50% {
@@ -335,7 +336,7 @@ a {
             0px 0 15px 0 rgb(231, 183, 78),
             /* Yellow light blur */
             55px 0 15px 0 transparent;
-            /* Green light blur */
+        /* Green light blur */
     }
 
     75% {
@@ -351,7 +352,7 @@ a {
             0px 0 15px 0 transparent,
             /* Yellow light blur */
             55px 0 15px 0 rgb(38, 175, 84);
-            /* Green light blur */
+        /* Green light blur */
     }
 
     to {
@@ -367,7 +368,7 @@ a {
             0px 0 15px 0 transparent,
             /* Yellow light blur */
             55px 0 15px 0 transparent;
-            /* Green light blur */
+        /* Green light blur */
     }
 }
 

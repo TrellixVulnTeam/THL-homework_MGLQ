@@ -38,7 +38,7 @@ var settings = {
         "x-rapidapi-key": "7d66317eadmshc37b41f504ff1c7p1f42d9jsneee75038948b"
     }
 }
-// Atain asychronous data
+// Attain asynchronous data
 function showSignal() {
     alert('Please wait for a moment.');
     $.ajax(settings).done(function (response) {
